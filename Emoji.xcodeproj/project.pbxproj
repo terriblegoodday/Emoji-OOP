@@ -57,9 +57,25 @@
 		77BA39252363BA82005F7A52 /* Emoji */ = {
 			isa = PBXGroup;
 			children = (
+				77BA392E2363C0B1005F7A52 /* src */,
+				77BA392D2363C0A7005F7A52 /* include */,
 				77BA39262363BA82005F7A52 /* main.cpp */,
 			);
 			path = Emoji;
+			sourceTree = "<group>";
+		};
+		77BA392D2363C0A7005F7A52 /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		77BA392E2363C0B1005F7A52 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

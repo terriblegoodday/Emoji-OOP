@@ -7,24 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7795BDB92389001600A22D4B /* emoji.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7795BDB82388FFCB00A22D4B /* emoji.txt */; };
 		77BA39272363BA82005F7A52 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77BA39262363BA82005F7A52 /* main.cpp */; };
+		77BA39312363C0F8005F7A52 /* utflib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77BA392F2363C0F8005F7A52 /* utflib.cpp */; };
+		77BA39392363C10F005F7A52 /* Emoji_Unit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BA39382363C10F005F7A52 /* Emoji_Unit_Tests.m */; };
+		77BA393E2363C116005F7A52 /* utflib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 77BA392F2363C0F8005F7A52 /* utflib.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		77BA39212363BA82005F7A52 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				7795BDB92389001600A22D4B /* emoji.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7795BDB82388FFCB00A22D4B /* emoji.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = emoji.txt; sourceTree = "<group>"; };
+		7795BDBA238906E500A22D4B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		77BA39232363BA82005F7A52 /* Emoji */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Emoji; sourceTree = BUILT_PRODUCTS_DIR; };
 		77BA39262363BA82005F7A52 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		77BA392F2363C0F8005F7A52 /* utflib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utflib.cpp; sourceTree = "<group>"; };
+		77BA39302363C0F8005F7A52 /* utflib.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = utflib.hpp; path = ../src/utflib.hpp; sourceTree = "<group>"; };
+		77BA39362363C10F005F7A52 /* Emoji Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Emoji Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77BA39382363C10F005F7A52 /* Emoji_Unit_Tests.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = Emoji_Unit_Tests.m; sourceTree = "<group>"; };
+		77BA393A2363C10F005F7A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,13 +47,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77BA39332363C10F005F7A52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7795BDB72388FFAD00A22D4B /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				7795BDB82388FFCB00A22D4B /* emoji.txt */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		77BA391A2363BA82005F7A52 = {
 			isa = PBXGroup;
 			children = (
+				7795BDBA238906E500A22D4B /* README.md */,
 				77BA39252363BA82005F7A52 /* Emoji */,
+				77BA39372363C10F005F7A52 /* Emoji Unit Tests */,
 				77BA39242363BA82005F7A52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				77BA39232363BA82005F7A52 /* Emoji */,
+				77BA39362363C10F005F7A52 /* Emoji Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +87,7 @@
 		77BA39252363BA82005F7A52 /* Emoji */ = {
 			isa = PBXGroup;
 			children = (
+				7795BDB72388FFAD00A22D4B /* resources */,
 				77BA392E2363C0B1005F7A52 /* src */,
 				77BA392D2363C0A7005F7A52 /* include */,
 				77BA39262363BA82005F7A52 /* main.cpp */,
@@ -67,6 +98,7 @@
 		77BA392D2363C0A7005F7A52 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				77BA39302363C0F8005F7A52 /* utflib.hpp */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -74,8 +106,18 @@
 		77BA392E2363C0B1005F7A52 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				77BA392F2363C0F8005F7A52 /* utflib.cpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		77BA39372363C10F005F7A52 /* Emoji Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				77BA39382363C10F005F7A52 /* Emoji_Unit_Tests.m */,
+				77BA393A2363C10F005F7A52 /* Info.plist */,
+			);
+			path = "Emoji Unit Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +140,23 @@
 			productReference = 77BA39232363BA82005F7A52 /* Emoji */;
 			productType = "com.apple.product-type.tool";
 		};
+		77BA39352363C10F005F7A52 /* Emoji Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77BA393B2363C10F005F7A52 /* Build configuration list for PBXNativeTarget "Emoji Unit Tests" */;
+			buildPhases = (
+				77BA39322363C10F005F7A52 /* Sources */,
+				77BA39332363C10F005F7A52 /* Frameworks */,
+				77BA39342363C10F005F7A52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Emoji Unit Tests";
+			productName = "Emoji Unit Tests";
+			productReference = 77BA39362363C10F005F7A52 /* Emoji Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +167,9 @@
 				ORGANIZATIONNAME = "Eduard Dzhumagaliev";
 				TargetAttributes = {
 					77BA39222363BA82005F7A52 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					77BA39352363C10F005F7A52 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -125,9 +187,20 @@
 			projectRoot = "";
 			targets = (
 				77BA39222363BA82005F7A52 /* Emoji */,
+				77BA39352363C10F005F7A52 /* Emoji Unit Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77BA39342363C10F005F7A52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77BA391F2363BA82005F7A52 /* Sources */ = {
@@ -135,6 +208,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				77BA39272363BA82005F7A52 /* main.cpp in Sources */,
+				77BA39312363C0F8005F7A52 /* utflib.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77BA39322363C10F005F7A52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77BA39392363C10F005F7A52 /* Emoji_Unit_Tests.m in Sources */,
+				77BA393E2363C116005F7A52 /* utflib.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +340,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HA8PQ78LFS;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -266,6 +350,41 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HA8PQ78LFS;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		77BA393C2363C10F005F7A52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HA8PQ78LFS;
+				INFOPLIST_FILE = "Emoji Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "terriblegoodday.Emoji-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		77BA393D2363C10F005F7A52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HA8PQ78LFS;
+				INFOPLIST_FILE = "Emoji Unit Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "terriblegoodday.Emoji-Unit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -287,6 +406,15 @@
 			buildConfigurations = (
 				77BA392B2363BA82005F7A52 /* Debug */,
 				77BA392C2363BA82005F7A52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77BA393B2363C10F005F7A52 /* Build configuration list for PBXNativeTarget "Emoji Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77BA393C2363C10F005F7A52 /* Debug */,
+				77BA393D2363C10F005F7A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

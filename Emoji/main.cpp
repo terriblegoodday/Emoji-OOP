@@ -7,11 +7,30 @@
 //
 
 #include <iostream>
-using namespace std;
+#include <fstream>
+#include <string>
+#include "utflib.hpp"
+
+typedef std::bitset<48> utf8char;
+
+void printChars(std::string forString) {
+    //    Prints the characters of `forString` in their binary form
+    char charArray[forString.length() + 1];
+    strcpy(charArray, forString.c_str());
+    for (auto c: charArray) {
+        std::cout << utflib::extractChar(c) << " ";
+    }
+    std::cout << std::endl;
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    
+    std::fstream file;
+    file.open("emoji.txt", ios::in);
+    for (std::string currentString; std::getline(file, currentString);) {
+        std::cout << currentString << std::endl;
+        printChars(currentString);
+    }
+    file.close();
     return 0;
 }
 
